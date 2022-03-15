@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    &:focus{
+        outline: none;
+    }
+}
+
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    background: #0F0F1B;
+    display: grid;
+    place-items: center;
+}
+
+.component{
+    &--pricing-list{
+        text-align: center;
+        header{
+            margin-bottom: 64px;
+            h3{
+                font-size: 26px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+            p{
+                font-size: 18px;
+                color: #fff;
+                max-width: 470px;
+                line-height: 22px;
+                margin: 0 auto;
+            }
+        }
+
+        .pricing-list{
+            display: flex;
+            margin:0 -10px;
+            li{
+                width: 265px;
+                margin:0 10px;
+                position: relative;
+                a{
+                    width: 100%;
+                    height: 267px;
+                    display: flex;
+                    background: #171727;
+                    border-radius: 20px;
+                    flex-direction: column;
+                    text-align: left;
+                    justify-content: center;
+                    padding: 35px;
+                    transition: 300ms background;
+                    &:hover{
+                        background: #242486;
+                        .btn img{
+                            margin-left: 20px;
+                        }
+                    }
+                    .title{
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #fff;
+                        margin-bottom: 35px;
+                        &:first-child{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .price{
+                        font-size: 26px;
+                        font-weight: bold;
+                        line-height: 32px;
+                        color: #fff;
+                        span{
+                            display: block;
+                            font-size: 16px;
+                            color: rgba(#fff, .7);
+                        }
+                    }
+                    .btn{
+                        font-size: 16px;
+                        color: #fff;
+                        margin-top: auto;
+                        display: flex;
+                        img{
+                            margin-left: 7px;
+                            transition: 300ms margin-left;
+                        }
+                    }
+                }
+                &:nth-child(2)::before{
+                    position: absolute;
+                    box-sizing: border-box;
+                    content: 'Best Price';
+                    font-size: 16px;
+                    height: 30px;
+                    top: -15px;
+                    right: 75px;
+                    background: #A0E0B2;
+                    border-radius: 30px;
+                    padding: 5px 19px;
+                }
+            }
+        }
+
+        .action{
+            margin-top: 64px;
+            text-align: center;
+            a{
+                display: inline-block;
+                background: #0F0F1B;
+                color: #8080B9;
+                border-radius: 10px;
+                border: 2px solid #1F1F35;
+                padding: 19px 45px;
+                transition: 300ms all;
+                 &:hover{
+                    border-color: #242486;
+                    background: #242486;
+                    color: #fff;
+                    transform: scale(1.03);
+                }
+            }
+         
+
+        }
+    }
+}
